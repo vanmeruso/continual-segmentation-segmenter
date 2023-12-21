@@ -1,7 +1,7 @@
 # Pytorch-segmenter
 Segmenter for domain semantic segmentation continual learning 
 
-#dataseet
+# dataset
 Cityscapes and ACDC
 
 # code reference
