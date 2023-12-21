@@ -14,7 +14,8 @@ pip install -r requirements.txt
 ```
 
 # Get start with cityscapes
-'''
+```
 python -m torch.distributed.launch --nproc_per_node=#   main.py
+```
 
-'''
+
