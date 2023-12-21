@@ -1,0 +1,32 @@
+backbone: vit_b_16 
+random_seed: 0
+
+
+dataset:
+  name: acdc
+  data_root: /mnt/ssd0/taeyoung/data/acdc/
+  num_classes: 19
+  crop_size: [768]
+  resize_range: [1024, 2048]
+  rescale_range: [0.5, 2.0]
+  ignore_index: 255
+  batch_size: 4
+  val_batch_size: 4
+  domain: snow
+
+train:
+  split: train_aug
+  epochs: 150
+  eval_iters: 5000
+  log_iters: 50
+
+optimizer:
+  type: AdamW
+  learning_rate: 6e-5
+  betas: [0.9, 0.999]
+  weight_decay: 0.01
+
+scheduler:
+  warmup_iter: 1500
+  warmup_ratio: 1e-6
+  power: 1.0

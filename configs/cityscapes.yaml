@@ -1,0 +1,34 @@
+
+backbone: vit_base_patch16_384 
+random_seed: 0
+
+
+dataset:
+  name: cityscapes
+  data_root: /mnt/ssd2/taeyoung/data/cityscapes/
+  num_classes: 19
+  crop_size: [768]
+  resize_range: [1024, 2048]
+  rescale_range: [0.5, 2.0]
+  ignore_index: 255
+  batch_size: 4
+  val_batch_size: 4
+
+train:
+  split: train_aug
+  epochs: 150
+  eval_iters: 5000
+  log_iters: 50
+
+optimizer:
+  clip_grad: null
+  iter_max: 80352
+  iter_warmup: 0.0
+  lr: 0.01
+  min_lr: 1.0e-05
+  momentum: 0.9
+  opt: sgd
+  poly_power: 0.9
+  poly_step_size: 1
+  sched: polynomial
+  weight_decay: 0.0

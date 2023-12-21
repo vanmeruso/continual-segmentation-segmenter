@@ -1,0 +1,8 @@
+imageio
+omegaconf
+timm==0.6.12
+Pillow==8.3.1
+tensorboard
+torchsummary
+# opencv-python
+einops
